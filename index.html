@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">  
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/set2.css" />
+
+</head>
+
+<body>
+    <div class="container-fluid">
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+
+             
+                    <a href="#"><img src="download.png" style="height:70px; display: block;
+    margin-left:auto;
+    margin-right: auto;"></a>
+               
+            </div>
+            <br><br>
+             <ul  class="nav nav-pills">
+    
+   <li><a data-toggle="pill" href="#home">REGISTRATION</a></li><br>
+<li><a data-toggle="pill" href="#change">PASSWORD CHANGE</a></li>
+     <li><a data-toggle="pill" href="#status">STATUS POSTING</a></li>
+    <li><a data-toggle="pill" href="#Private">PRIVATE CHAT</a></li>
+    <li><a data-toggle="pill" href="#follow">FOLLOWERS &nbsp;</a></li>
+      <li><a data-toggle="pill" href="#following">FOLLOWINGS&nbsp;&nbsp;      </a></li>
+       <li><a data-toggle="pill" href="#liking">LIKE/DISLIKE</a></li>
+         <li><a data-toggle="pill" href="#sharing">SHARING POSTS</a></li>
+  </ul>
+
+           
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+          
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+
+                        <span>Murmur is here</span>
+                    </button>
+              
+
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" class="col-xs-2" style="display:block;">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <form method="post">
+                                     <section class="content bgcolor-7">
+                                      <span class="input input--nariko">
+                         <input class="input__field input__field--nariko" type="text" name="acc_name" />
+                    <label class="input__label input__label--nariko">
+                        <span class="input__label-content input__label-content--nariko">Account Name</span>
+
+                    </label>                  
+
+                </span>   <br>
+                         <input style="background-color: white;color: #000000 ; border:none; " type="submit" value="Create" formaction="/token/create">
+                
+                            <input style="background-color: white;color:  #000000 ;border:none;" type="submit"   value="Wasm" formaction="/token/wasm">
+                          
+                            <input style="background-color:white;color:  #000000 ;border:none;" type="submit"  value="Abi" formaction="/token/abi">   &nbsp; 
+                           
+            </section>
+                    </form>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+          <div  class="tab-content">
+  
+                  <div id="home" class="tab-pane fade"><center>
+              
+                     <form method="post" action="/token/register">
+                        <input type="text" minlength="12" name="acc_name" placeholder="Enter the Account name">
+                        <br><br>
+                     <input type="text" minlength="12" name="aname" placeholder="Enter the user name">
+                        <br><br>
+
+                            <input type="text" minlength="10" maxlength="15" name="pass"  placeholder="Enter password">
+                        <br><br>
+                        <input type="text" minlength="10" maxlength="15" name="skey" placeholder="Enter the secret Key">
+                        <br><br>
+                        <button class="button" type=submit ><span>Register</span></button>
+                    </form>
+                     <form method="post" action="/token/de_register">
+                        <br><br>
+                        <input type="text" name="dac" placeholder="Enter the user name">
+                        <br><br>
+                        <button class="button" type=submit ><span>De-register</span></button>
+                        <br><br></form>
+                        </center>
+                  </div>
+                 <div id="change" class="tab-pane fade"><center>
+                     <form method="post" action="/token/change">
+                        <input type="text" minlength="12" name="acc_name" placeholder="Enter the Account name">
+                        <br><br>
+                        <input type="text" minlength="12" name="aname1" placeholder="Enter the user name">
+                        <br><br>
+                        <input type="text" minlength="10" maxlength="15" name="pass1" placeholder="Enter password">
+                        <br><br>
+                        <input type="text" minlength="10" maxlength="15" name="skey1" placeholder="Enter the secret key">
+                        <br><br>
+                         <button class="button" type=submit ><span>Change</span></button>
+                     </form>
+                        </center>
+                  </div>
+                      <div id="status" class="tab-pane fade"><center>
+                         <form method="post" action="/token/chating">
+                            <input type="text" minlength="12" name="acc_name" placeholder="Enter the Account name">
+                        <br><br>
+        
+                        <input type="text" minlength="12" name="name1" placeholder="Enter the user name">
+                        <br><br>
+                        <input type="text" name="chat" placeholder="start your conversation">
+                        <br><br>
+                        <button class="button" type=submit ><span>Status</span></button>
+                        <br><br>
+                        </form>
+                        </center>
+                    </div>
+
+                    <div id="Private" class="tab-pane fade"><center>
+                          <div class="col-sm-3 col-sm-offset-4 frame">
+            <ol></ol>
+
+            <div>
+                
+                <div class="msj-rta macro">                        
+                    <div class="text text-r" style="background:whitesmoke !important">
+                        <input class="mytext" style="color:black;" placeholder="Type a message"/>
+                    </div> 
+
+                </div>
+                <div style="padding:10px;">
+                    <span class="glyphicon glyphicon-share-alt"></span>
+                </div>                
+            </div>
+        </div>       
+                    </center>   
+                    </div>
+
+                    <div id="follow" class="tab-pane fade"><center>
+
+                    <form method="post" method="/token/follow">
+                        <input type="text" minlength="12" name="acc_name" placeholder="Enter the Account name">
+                        <br><br>
+                     <input type="text" minlength="12" name="name" placeholder="Enter user name">
+                    <br><br>
+                    <input type="text" minlength="12" name="namef" placeholder="Enter user name">
+                    <br><br>
+                    <button class="button" type=submit ><span>Follow</span></button></form>
+                </form>
+                <form method="post" method="/token/unfollow">
+                    <br><br>
+                    <input type="text" minlength="12" name="uname" placeholder="Enter user name">
+                    <br><br>
+                    <input type="text" minlength="12" name="unamef" placeholder="Enter user name">
+                    <br><br>
+                    <button class="button" type=submit ><span>Unfollow</span></button>
+                    <br><br>
+                    
+                </form>
+                    </center>
+                  </div>  
+
+                    <div id="following" class="tab-pane fade"><center>
+
+                    <form method="post" action="/token/following">
+                         <br><br>
+                         <input type="text" minlength="12" name="acc_name" placeholder="Enter the Account name">
+                        <br><br>
+                    <input type="text" minlength="12" name="myname" placeholder="Enter user name">
+                    <br><br>
+                    <input type="text" minlength="12" name="followname" placeholder="Enter user name">
+                    <br><br>    
+                     <button class="button" type=submit ><span>Following</span></button>
+                    <br><br></form>
+                     <form method="post" action="/token/unfollowing">
+                    <input type="text" minlength="12" name="my_name" placeholder="Enter user name">
+                    <br><br>
+                    <input type="text" minlength="12" name="unfollowname" placeholder="Enter user name">
+                    <br><br>
+                     <button class="button" type=submit ><span>Unfollowing</span></button>
+                    <br><br>
+                        </form>
+                        </center>
+                    </div>
+
+                    <div id="liking" class="tab-pane fade"><center>
+
+                    <form method="post" formaction="/token/Like">
+                        <input type="text" minlength="12" name="acc_name" placeholder="Enter the Account name">
+                        <br><br>
+                            <input type="text" minlength="12" name="lname" placeholder="Enter user name">
+                            <br><br>
+                            <input type="text" minlength="12" name="liken_name" placeholder="Enter user name">
+                            <br><br>
+                            <input type="text" name="ltime" placeholder="Enter the time">
+                                <br><br>
+                              <button class="button" type=submit ><span>Liking</span></button>
+                            <br><br>
+                                </form>
+                                <form method="post" formaction="/token/Dislike">
+                            <input type="text" minlength="12" name="dname" placeholder="Enter user name">
+                            <br><br>
+                            <input type="text" minlength="12" name="disliken_name" placeholder="Enter user name">
+                                <br><br>
+                            <input type="text" name="dtime" placeholder="Enter the time">
+                            <br><br>
+                               <button class="button" type=submit ><span>Disliking</span></button>
+                            <br><br>
+                    </form>
+                    </center>
+                    </div>
+
+                <div id="sharing" class="tab-pane fade"><center>
+
+                    <form method="post" action="/token/share">
+                        <input type="text" minlength="12" name="acc_name" placeholder="Enter the user name">
+                        <br><br>
+                        <input type="text" minlength="12" name="poster" placeholder="Enter user name">
+                        <br><br>
+                        <input type="text" minlength="12" name="po_name" placeholder="Enter user name">
+                        <br><br>
+                        <input type="text" minlength="12" name="sh_name" placeholder="Enter user name">
+                        <br><br>
+                        <input type="text" name="post" placeholder="Enter the time">
+                        <br><br>
+                       <button class="button" type=submit ><span>Share</span></button>
+                        <br><br>
+                    </form>
+                </center>
+
+      </div>
+
+    </div>
+       
+</div>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script >
+        var me = {};
+me.avatar = "https://lh6.googleusercontent.com/-lr2nyjhhjXw/AAAAAAAAAAI/AAAAAAAARmE/MdtfUmC0M4s/photo.jpg?sz=48";
+
+var you = {};
+you.avatar = "https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg";
+
+function formatAMPM(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    return strTime;
+}            
+
+//-- No use time. It is a javaScript effect.
+function insertChat(who, text, time){
+    if (time === undefined){
+        time = 0;
+    }
+    var control = "";
+    var date = formatAMPM(new Date());
+    
+    if (who == "me"){
+        control = '<li style="width:100%">' +
+                        '<div class="msj macro">' +
+                        '<div class="avatar"><img class="img-circle" style="width:100%;" src="'+ me.avatar +'" /></div>' +
+                            '<div class="text text-l">' +
+                                '<p>'+ text +'</p>' +
+                                '<p><small>'+date+'</small></p>' +
+                            '</div>' +
+                        '</div>' +
+                    '</li>';                    
+    }else{
+        control = '<li style="width:100%;">' +
+                        '<div class="msj-rta macro">' +
+                            '<div class="text text-r">' +
+                                '<p>'+text+'</p>' +
+                                '<p><small>'+date+'</small></p>' +
+                            '</div>' +
+                        '<div class="avatar" style="padding:0px 0px 0px 10px !important"><img class="img-circle" style="width:100%;" src="'+you.avatar+'" /></div>' +                                
+                  '</li>';
+    }
+    setTimeout(
+        function(){                        
+            $("ol").append(control).scrollTop($("ol").prop('scrollHeight'));
+        }, time);
+    
+}
+
+function resetChat(){
+    $("ol").empty();
+}
+
+$(".mytext").on("keydown", function(e){
+    if (e.which == 13){
+        var text = $(this).val();
+        if (text !== ""){
+            insertChat("me", text);              
+            $(this).val('');
+        }
+    }
+});
+
+$('body > div > div > div:nth-child(2) > span').click(function(){
+    $(".mytext").trigger({type: 'keydown', which: 13, keyCode: 13});
+})
+
+//-- Clear Chat
+resetChat();
+
+
+//-- NOTE: No use time on insertChat.
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
+
