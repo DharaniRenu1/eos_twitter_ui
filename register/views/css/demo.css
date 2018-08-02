@@ -1,0 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:200,500,700,800);
+
+
+
+
+
+.container {
+	overflow: hidden;
+}
+
+.content {
+	font-size: 120%;
+	
+	
+}
+
+
+
+	
+.bgcolor-8 { background: #3d4444; color: #fff; }
+.bgcolor-9 { background: #8781bd; color: #fff; }
+.bgcolor-10 { background: #6C6C6C; }
+
+
+
+/* Related demos */
+.content--related {
+
+	text-align: center;
+	color: black;
+	font-weight: bold;
+}
